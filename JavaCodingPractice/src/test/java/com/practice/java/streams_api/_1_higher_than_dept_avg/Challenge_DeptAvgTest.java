@@ -12,7 +12,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("Challenge: Employees Higher Than Department Average Salary Tests")
-class ChallengeTest {
+class Challenge_DeptAvgTest {
 
     @Nested
     @DisplayName("Sample Data Scenarios")
@@ -21,9 +21,9 @@ class ChallengeTest {
         @Test
         @DisplayName("Should return employees whose salary is strictly greater than their department average")
         void testSampleDataEmployeesHigherThanDeptAvg() {
-            List<Employee> employees = Challenge.getSampleEmployees();
+            List<Employee> employees = Challenge_DeptAvg.getSampleEmployees();
 
-            List<Employee> result = Challenge.findEmployeesHigherThanDeptAvg(employees);
+            List<Employee> result = Challenge_DeptAvg.findEmployeesHigherThanDeptAvg(employees);
 
             assertNotNull(result, "Result should not be null");
             assertEquals(3, result.size(), "Expected exactly 3 employees earning above department average");
@@ -38,9 +38,9 @@ class ChallengeTest {
         @Test
         @DisplayName("Should not include employees whose salary is exactly equal to the department average")
         void testEmployeeWithSalaryEqualToDepartmentAverageIsNotIncluded() {
-            List<Employee> employees = Challenge.getSampleEmployees();
+            List<Employee> employees = Challenge_DeptAvg.getSampleEmployees();
 
-            List<Employee> result = Challenge.findEmployeesHigherThanDeptAvg(employees);
+            List<Employee> result = Challenge_DeptAvg.findEmployeesHigherThanDeptAvg(employees);
 
             assertNotNull(result, "Result should not be null");
             // Alice in IT earns 75,000 which is exactly the average of IT (75,000 + 90,000 + 60,000) / 3 = 75,000
@@ -56,7 +56,7 @@ class ChallengeTest {
         @Test
         @DisplayName("Should return an empty list when given an empty employee list")
         void testEmptyEmployeeListReturnsEmptyList() {
-            List<Employee> result = Challenge.findEmployeesHigherThanDeptAvg(Collections.emptyList());
+            List<Employee> result = Challenge_DeptAvg.findEmployeesHigherThanDeptAvg(Collections.emptyList());
 
             assertNotNull(result, "Result should not be null");
             assertTrue(result.isEmpty(), "Result should be empty for an empty employee list");
@@ -65,7 +65,7 @@ class ChallengeTest {
         @Test
         @DisplayName("Should handle null input gracefully by returning an empty list")
         void testNullInputReturnsEmptyList() {
-            List<Employee> result = Challenge.findEmployeesHigherThanDeptAvg(null);
+            List<Employee> result = Challenge_DeptAvg.findEmployeesHigherThanDeptAvg(null);
 
             assertNotNull(result, "Result should not be null");
             assertTrue(result.isEmpty(), "Result should be empty when input is null");
@@ -79,7 +79,7 @@ class ChallengeTest {
                     new Employee(2, "Solo HR", "HR", new BigDecimal("60000"))
             );
 
-            List<Employee> result = Challenge.findEmployeesHigherThanDeptAvg(employees);
+            List<Employee> result = Challenge_DeptAvg.findEmployeesHigherThanDeptAvg(employees);
 
             assertNotNull(result, "Result should not be null");
             assertTrue(result.isEmpty(),
@@ -95,7 +95,7 @@ class ChallengeTest {
                     new Employee(3, "Emp3", "IT", new BigDecimal("60000"))
             );
 
-            List<Employee> result = Challenge.findEmployeesHigherThanDeptAvg(employees);
+            List<Employee> result = Challenge_DeptAvg.findEmployeesHigherThanDeptAvg(employees);
 
             assertNotNull(result, "Result should not be null");
             assertTrue(result.isEmpty(),
@@ -119,7 +119,7 @@ class ChallengeTest {
                     new Employee(4, "Senior 2", "IT", new BigDecimal("110000"))
             );
 
-            List<Employee> result = Challenge.findEmployeesHigherThanDeptAvg(employees);
+            List<Employee> result = Challenge_DeptAvg.findEmployeesHigherThanDeptAvg(employees);
 
             assertNotNull(result, "Result should not be null");
             assertEquals(2, result.size());
@@ -140,7 +140,7 @@ class ChallengeTest {
                     new Employee(4, "Sales2", "Sales", new BigDecimal("80000"))
             );
 
-            List<Employee> result = Challenge.findEmployeesHigherThanDeptAvg(employees);
+            List<Employee> result = Challenge_DeptAvg.findEmployeesHigherThanDeptAvg(employees);
 
             assertNotNull(result, "Result should not be null");
             assertEquals(1, result.size());
@@ -158,7 +158,7 @@ class ChallengeTest {
                     new Employee(3, "Fin3", "Finance", new BigDecimal("50000.50"))
             );
 
-            List<Employee> result = Challenge.findEmployeesHigherThanDeptAvg(employees);
+            List<Employee> result = Challenge_DeptAvg.findEmployeesHigherThanDeptAvg(employees);
 
             assertNotNull(result, "Result should not be null");
             assertEquals(1, result.size());
@@ -184,7 +184,7 @@ class ChallengeTest {
                     new Employee(10, "Lead", "Support", new BigDecimal("90000"))
             );
 
-            List<Employee> result = Challenge.findEmployeesHigherThanDeptAvg(employees);
+            List<Employee> result = Challenge_DeptAvg.findEmployeesHigherThanDeptAvg(employees);
 
             assertNotNull(result, "Result should not be null");
             assertEquals(1, result.size());

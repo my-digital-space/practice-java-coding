@@ -16,7 +16,7 @@
  *
  * Note:
  * Implement your solution inside the findEmployeesHigherThanDeptAvg method below.
- * You can verify your implementation by running the unit tests in ChallengeTest.java.
+ * You can verify your implementation by running the unit tests in Challenge_DeptAvgTest.java.
  * ============================================================================
  */
 package com.practice.java.streams_api._1_higher_than_dept_avg;
@@ -26,7 +26,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class Challenge {
+public class Challenge_DeptAvg {
 
     public static void main(String[] args) {
         List<Employee> employees = getSampleEmployees();

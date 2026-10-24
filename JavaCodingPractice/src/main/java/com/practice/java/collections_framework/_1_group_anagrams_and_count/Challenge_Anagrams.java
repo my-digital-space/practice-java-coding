@@ -47,7 +47,7 @@
  *
  * Note:
  * Implement your solution inside the groupAnagramsAndCount method below.
- * You can verify your implementation by running the unit tests in ChallengeTest.java.
+ * You can verify your implementation by running the unit tests in Challenge_AnagramsTest.java.
  * ============================================================================
  */
 package com.practice.java.collections_framework._1_group_anagrams_and_count;
@@ -56,7 +56,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-public class Challenge {
+public class Challenge_Anagrams {
 
     public static void main(String[] args) {
         List<String> words = getSampleWords();

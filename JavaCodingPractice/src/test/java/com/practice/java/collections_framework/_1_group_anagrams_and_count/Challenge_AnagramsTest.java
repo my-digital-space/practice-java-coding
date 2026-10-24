@@ -11,7 +11,7 @@ import java.util.Map;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("Challenge: Group Anagrams and Count Tests (Collections Framework)")
-class ChallengeTest {
+class Challenge_AnagramsTest {
 
     @Nested
     @DisplayName("Sample Data Scenarios")
@@ -20,9 +20,9 @@ class ChallengeTest {
         @Test
         @DisplayName("Should correctly group anagrams and return counts for sample words")
         void testSampleDataAnagramGroupingAndCounts() {
-            List<String> words = Challenge.getSampleWords();
+            List<String> words = Challenge_Anagrams.getSampleWords();
 
-            Map<List<String>, Long> result = Challenge.groupAnagramsAndCount(words);
+            Map<List<String>, Long> result = Challenge_Anagrams.groupAnagramsAndCount(words);
 
             assertNotNull(result, "Result map should not be null");
             assertEquals(3, result.size(), "Expected 3 distinct anagram groups");
@@ -57,7 +57,7 @@ class ChallengeTest {
         void testSampleDataWithDuplicates() {
             List<String> words = List.of("abc", "abc", "bca", "xyz");
 
-            Map<List<String>, Long> result = Challenge.groupAnagramsAndCount(words);
+            Map<List<String>, Long> result = Challenge_Anagrams.groupAnagramsAndCount(words);
 
             assertNotNull(result, "Result map should not be null");
             assertEquals(2, result.size(), "Expected 2 groups: [abc, abc, bca] and [xyz]");
@@ -81,7 +81,7 @@ class ChallengeTest {
         @Test
         @DisplayName("Should return an empty map when given an empty list")
         void testEmptyListReturnsEmptyMap() {
-            Map<List<String>, Long> result = Challenge.groupAnagramsAndCount(Collections.emptyList());
+            Map<List<String>, Long> result = Challenge_Anagrams.groupAnagramsAndCount(Collections.emptyList());
 
             assertNotNull(result, "Result should not be null");
             assertTrue(result.isEmpty(), "Result should be empty for an empty input list");
@@ -90,7 +90,7 @@ class ChallengeTest {
         @Test
         @DisplayName("Should handle null input gracefully by returning an empty map")
         void testNullInputReturnsEmptyMap() {
-            Map<List<String>, Long> result = Challenge.groupAnagramsAndCount(null);
+            Map<List<String>, Long> result = Challenge_Anagrams.groupAnagramsAndCount(null);
 
             assertNotNull(result, "Result should not be null");
             assertTrue(result.isEmpty(), "Result should be empty when input is null");
@@ -101,7 +101,7 @@ class ChallengeTest {
         void testSingleWordReturnsSingleGroupWithCountOne() {
             List<String> words = List.of("hello");
 
-            Map<List<String>, Long> result = Challenge.groupAnagramsAndCount(words);
+            Map<List<String>, Long> result = Challenge_Anagrams.groupAnagramsAndCount(words);
 
             assertNotNull(result);
             assertEquals(1, result.size());
@@ -113,7 +113,7 @@ class ChallengeTest {
         void testAllIdenticalWordsGroupedTogether() {
             List<String> words = List.of("duplicate", "duplicate", "duplicate");
 
-            Map<List<String>, Long> result = Challenge.groupAnagramsAndCount(words);
+            Map<List<String>, Long> result = Challenge_Anagrams.groupAnagramsAndCount(words);
 
             assertNotNull(result);
             assertEquals(1, result.size());
@@ -127,7 +127,7 @@ class ChallengeTest {
         void testEmptyStringsGroupedTogether() {
             List<String> words = List.of("", "", "a");
 
-            Map<List<String>, Long> result = Challenge.groupAnagramsAndCount(words);
+            Map<List<String>, Long> result = Challenge_Anagrams.groupAnagramsAndCount(words);
 
             assertNotNull(result);
             assertEquals(2, result.size());
@@ -152,7 +152,7 @@ class ChallengeTest {
         void testNoAnagramsAllDistinctWords() {
             List<String> words = List.of("cat", "dog", "bird", "fish");
 
-            Map<List<String>, Long> result = Challenge.groupAnagramsAndCount(words);
+            Map<List<String>, Long> result = Challenge_Anagrams.groupAnagramsAndCount(words);
 
             assertNotNull(result);
             assertEquals(4, result.size(), "Each distinct word should form its own group");
@@ -164,7 +164,7 @@ class ChallengeTest {
         void testAllWordsAreAnagrams() {
             List<String> words = List.of("listen", "silent", "enlist", "tinsel");
 
-            Map<List<String>, Long> result = Challenge.groupAnagramsAndCount(words);
+            Map<List<String>, Long> result = Challenge_Anagrams.groupAnagramsAndCount(words);
 
             assertNotNull(result);
             assertEquals(1, result.size(), "All words are permutations and should form 1 group");
@@ -178,7 +178,7 @@ class ChallengeTest {
         void testSameCharactersDifferentFrequenciesNotAnagrams() {
             List<String> words = List.of("a", "aa", "aaa", "aaaa");
 
-            Map<List<String>, Long> result = Challenge.groupAnagramsAndCount(words);
+            Map<List<String>, Long> result = Challenge_Anagrams.groupAnagramsAndCount(words);
 
             assertNotNull(result);
             assertEquals(4, result.size(), "Words with different character frequencies must not be grouped together");
@@ -190,7 +190,7 @@ class ChallengeTest {
         void testAnagramsWithSubstringsAndNearMatches() {
             List<String> words = List.of("loop", "pool", "polo", "spool", "pools");
 
-            Map<List<String>, Long> result = Challenge.groupAnagramsAndCount(words);
+            Map<List<String>, Long> result = Challenge_Anagrams.groupAnagramsAndCount(words);
 
             assertNotNull(result);
             assertEquals(2, result.size());

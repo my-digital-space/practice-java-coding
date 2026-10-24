@@ -37,10 +37,10 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Solution {
+public class Solution_Anagrams {
 
     public static void main(String[] args) {
-        List<String> words = Challenge.getSampleWords();
+        List<String> words = Challenge_Anagrams.getSampleWords();
 
         System.out.println("=================================================");
         System.out.println("Input Words:");

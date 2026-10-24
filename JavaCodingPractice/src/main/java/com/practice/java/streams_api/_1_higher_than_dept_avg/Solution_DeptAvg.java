@@ -31,10 +31,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class Solution {
+public class Solution_DeptAvg {
 
     public static void main(String[] args) {
-        List<Employee> employees = Challenge.getSampleEmployees();
+        List<Employee> employees = Challenge_DeptAvg.getSampleEmployees();
 
         System.out.println("--- All Employees ---");
         employees.forEach(System.out::println);
