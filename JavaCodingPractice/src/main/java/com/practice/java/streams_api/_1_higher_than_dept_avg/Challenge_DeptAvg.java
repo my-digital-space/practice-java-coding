@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Java Streams API Challenge: Employees Earning Higher Than Department Average
+ * Challenge: Employees Earning Higher Than Department Average
  * ============================================================================
  *
  * Problem Description:
@@ -11,8 +11,8 @@
  *   3. "Finance"
  *
  * Objective:
- * Using the Java Streams API, find and display/print all employees whose salary
- * is strictly greater than the average salary of their respective department.
+ * Find and display/print all employees whose salary is strictly greater than
+ * the average salary of their respective department.
  *
  * Note:
  * Implement your solution inside the findEmployeesHigherThanDeptAvg method below.
@@ -46,7 +46,7 @@ public class Challenge_DeptAvg {
      * @return list of employees earning more than their department's average salary
      */
     public static List<Employee> findEmployeesHigherThanDeptAvg(List<Employee> employees) {
-        // TODO: Implement this method using Java Streams API
+        // TODO: Implement this method
         return Collections.emptyList();
     }
 

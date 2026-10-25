@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Java Collections Framework Challenge: Group Anagrams and Count
+ * Challenge: Group Anagrams and Count
  * ============================================================================
  *
  * Problem Description:
@@ -40,11 +40,6 @@
  *      - Empty list or null input should return an empty map.
  *      - Single-element list should return that single word in a group with count 1.
  *
- * Time and Space Complexity:
- * - Time Complexity: O(N * K log K), where N is the number of words
- *   and K is the maximum length of a word.
- * - Space Complexity: O(N * K) to store the grouped anagrams and their frequencies.
- *
  * Note:
  * Implement your solution inside the groupAnagramsAndCount method below.
  * You can verify your implementation by running the unit tests in Challenge_AnagramsTest.java.
@@ -77,7 +72,7 @@ public class Challenge_Anagrams {
      * @return map where key is the list of anagram words and value is the count
      */
     public static Map<List<String>, Long> groupAnagramsAndCount(List<String> words) {
-        // TODO: Implement this method using Java Collections Framework (e.g. HashMap / LinkedHashMap)
+        // TODO: Implement this method
         return Collections.emptyMap();
     }
 

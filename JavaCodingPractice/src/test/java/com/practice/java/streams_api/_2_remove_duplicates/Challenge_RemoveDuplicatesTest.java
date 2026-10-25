@@ -11,7 +11,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@DisplayName("Challenge: Remove Duplicates from List of Strings Tests (Streams API)")
+@DisplayName("Challenge: Remove Duplicates from List of Strings Tests")
 class Challenge_RemoveDuplicatesTest {
 
     @Nested

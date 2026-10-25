@@ -10,7 +10,7 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@DisplayName("Challenge: Group Anagrams and Count Tests (Collections Framework)")
+@DisplayName("Challenge: Group Anagrams and Count Tests")
 class Challenge_AnagramsTest {
 
     @Nested

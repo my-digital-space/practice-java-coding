@@ -48,15 +48,13 @@ public class Solution_Anagrams {
         System.out.println("=================================================");
 
         System.out.println("\n--- Solution 1: HashMap + Sorting Characters ---");
-        Map<List<String>, Long> result1 = solution1(words);
+        Map<List<String>, Long> result1 = solution1_SortCharacters(words);
         result1.forEach((group, count) -> System.out.println("  " + group + " -> " + count));
 
         System.out.println("\n--- Solution 2: HashMap + Character Frequency ---");
-        Map<List<String>, Long> result2 = solution2(words);
+        Map<List<String>, Long> result2 = solution2_CharacterFrequency(words);
         result2.forEach((group, count) -> System.out.println("  " + group + " -> " + count));
     }
-
-
 
     /**
      * Solution 1: HashMap + sorting characters (Recommended — Simple and Intuitive)
@@ -74,7 +72,7 @@ public class Solution_Anagrams {
      * @param words list of input words
      * @return map where key is the list of anagram words and value is the count
      */
-    public static Map<List<String>, Long> solution1(List<String> words) {
+    public static Map<List<String>, Long> solution1_SortCharacters(List<String> words) {
         // Step 0: Guard check against null or empty input
         if (words == null || words.isEmpty()) {
             return Collections.emptyMap();
@@ -153,7 +151,7 @@ public class Solution_Anagrams {
      * @param words list of input words
      * @return map where key is the list of anagram words and value is the count
      */
-    public static Map<List<String>, Long> solution2(List<String> words) {
+    public static Map<List<String>, Long> solution2_CharacterFrequency(List<String> words) {
         // Step 0: Guard check against null or empty input
         if (words == null || words.isEmpty()) {
             return Collections.emptyMap();
